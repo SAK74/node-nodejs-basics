@@ -1,5 +1,9 @@
+import { env } from "node:process";
+
 const parseEnv = () => {
-    // Write your code here 
+  for (const name in env) {
+    console.log(`RSS_${name}=${env[name]}`);
+  }
 };
 
 parseEnv();
